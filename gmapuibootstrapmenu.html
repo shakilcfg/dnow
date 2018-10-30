@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+  <!-- Global stylesheets -->
+ <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+  <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+  
+  <!-- /global stylesheets -->
+
+  <!-- Core JS files -->
+  <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+  <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+  <!-- /core JS files -->
+
+  <!-- Theme JS files -->
+  <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
+  <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
+
+  <script type="text/javascript" src="assets/js/core/app.js"></script>
+  
+ <script type="text/javascript" src="assets/js/pages/dashboard.js"></script>
+  <script type="text/javascript" src="http://static.jstree.com/3.0.0-beta3/assets/dist/jstree.min.js"></script>
+  
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+          height: 100%;
+          width: 100%;
+          float: right;
+		  position:initial !important;
+		  overflow:hidden;
+		  
+      }
+	  
+	  .gmnoprint {
+	  	    }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+		overflow:hidden;
+      }
+	  
+  .navigation li a:hover, .navigation li a:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+   color: #ef6c00;
+}
+	  
+	 . gm-style-mtc {
+	 	
+	 }
+	  .navbar-inverse {
+      z-index: 999 !important; 
+}
+
+      .bar-left {
+         height: 100%;
+          width: 20%;
+          float: left;
+
+      }
+    </style>
+  </head>
+  <body>
+
+  <!-- Main navigation -->
+          <!-- <div class="sidebar-category sidebar-category-visible">
+            <div class="category-content no-padding">
+              <div id="jstree">
+
+              </div>
+            </div>
+          </div> -->
+          <!-- /main navigation -->
+
+<!-- Main navbar -->
+  <div class="navbar navbar-inverse">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><img src="esite.png" alt=""></a>
+
+      <ul class="nav navbar-nav visible-xs-block">
+        <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+        <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-mobile">
+      <ul class="nav navbar-nav">
+        <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Text link</a></li>
+
+        <li>
+          <a href="#">
+            <i class="icon-cog3"></i>
+            <span class="visible-xs-inline-block position-right">Icon link</span>
+          </a>            
+        </li>
+
+        <li class="dropdown dropdown-user">
+          <a class="dropdown-toggle" data-toggle="dropdown">
+            <img src="assets/images/image.png" alt="">
+            <span>Victoria</span>
+            <i class="caret"></i>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+            <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+            <li><a href="#"><span class="badge badge-warning pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /main navbar -->
+          <!-- Main sidebar -->
+      <div class="sidebar sidebar-main">
+        <div class="sidebar-content">
+
+          <!-- User menu -->
+          <div class="sidebar-user">
+            <div class="category-content">
+              <div class="media">
+                <a href="#" class="media-left"><img src="assets/images/image.png" class="img-circle img-sm" alt=""></a>
+                <div class="media-body">
+                  <span class="media-heading text-semibold"><a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs">
+															<span class="letter-icon">A</span>
+														</a>Annebella L.</span>
+                  </div>
+
+                <div class="media-right media-middle">
+                  <ul class="icons-list">
+                    <li>
+                      <a href="#"><i class="icon-cog3"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /user menu -->
+
+
+          <!-- Main navigation -->
+          <div class="sidebar-category sidebar-category-visible">
+            <div class="category-content no-padding">
+              <ul class="navigation navigation-main navigation-accordion">
+
+                <!-- Main -->
+                <!--<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li> -->
+                <li><a href="../index.html"><i class="icon-home4"></i> <span>Main</span></a></li>
+				 <li><a href="../index.html"><i class="icon-home4"></i> <span>Layer</span></a></li>
+				  <li><a href="../index.html"><i class="icon-home7"></i> <span>Stores</span></a></li>
+				   <li><a href="../index.html"><i class="icon-cart"></i> <span>Competition</span></a></li>
+				   <li><a href="../index.html"><i class="icon-store"></i> <span>Potential Sites</span></a></li>
+				   <li><a href="../index.html"><i class="icon-circle"></i> <span>Optimization</span></a></li>
+				   <li><a href="../index.html"><i class="icon-home4"></i> <span>Contentants</span></a></li>
+					 <li><a href="../index.html"><i class="icon-bag"></i> <span>Shopping Centers</span></a></li>
+					 <li><a href="../index.html"><i class="icon-home4"></i> <span>Planning Groceries</span></a></li>
+					 <li><a href="../index.html"><i class="icon-user"></i> <span>Customer Segmentation</span></a></li>
+					 <li><a href="../index.html"><i class="icon-home4"></i> <span>Trip2Trade</span></a></li>
+					  <li><a href="../index.html"><i class="icon-car"></i> <span>Traffic</span></a></li>
+                <li>
+                  <a href="#"><i class="icon-stack"></i> <span>Map Base Layers</span></a>
+                  <ul>
+                    <li><a href="horizontal_nav.html">Midnight Blue</a></li>
+                    <li><a href="1_col.html">Ultra Light</a></li>
+                    <li class="active"><a href="2_col.html">Sand Gold</a></li>
+                    <li>
+                      <a href="#">3 columns</a>
+                  
+                    </li>
+                    <li><a href="4_col.html">4 columns</a></li>
+                    <li>
+                      <a href="#">Detached layout</a>
+                      <ul>
+                        <li><a href="detached_left.html">Left sidebar</a></li>
+                        <li><a href="detached_right.html">Right sidebar</a></li>
+                        <li><a href="detached_sticky.html">Sticky sidebar</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="layout_boxed.html">Boxed layout</a></li>
+                    <li class="navigation-divider"></li>
+                    <li><a href="layout_navbar_fixed_main.html">Fixed top navbar</a></li>
+                    <li><a href="layout_navbar_fixed_secondary.html">Fixed secondary navbar</a></li>
+                    <li><a href="layout_navbar_fixed_both.html">Both navbars fixed</a></li>
+                    <li><a href="layout_fixed.html">Fixed layout</a></li>
+                  </ul>
+                </li>
+                <li><a href="../changelog.html"><i class="icon-list-unordered"></i> <span>Changelog</span></a></li>
+                <!-- /main -->
+
+              </ul>
+            </div>
+          </div>
+          <!-- /main navigation -->
+
+        </div>
+      </div>
+      <!-- /main sidebar -->
+
+    <!-- <div class="bar-left">
+    <input class="search-input form-control"></input>
+    <div id="jstree"></div>
+    </div>
+     -->
+    <div id="map"></div>
+    <script>
+     function initMap(){var e=new google.maps.StyledMapType([{elementType:"geometry",stylers:[{color:"#ebe3cd"}]},{elementType:"labels.text.fill",stylers:[{color:"#523735"}]},{elementType:"labels.text.stroke",stylers:[{color:"#f5f1e6"}]},{featureType:"administrative",elementType:"geometry.stroke",stylers:[{color:"#c9b2a6"}]},{featureType:"administrative.land_parcel",elementType:"geometry.stroke",stylers:[{color:"#dcd2be"}]},{featureType:"administrative.land_parcel",elementType:"labels.text.fill",stylers:[{color:"#ae9e90"}]},{featureType:"landscape.natural",elementType:"geometry",stylers:[{color:"#dfd2ae"}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#dfd2ae"}]},{featureType:"poi",elementType:"labels.text.fill",stylers:[{color:"#93817c"}]},{featureType:"poi.park",elementType:"geometry.fill",stylers:[{color:"#a5b076"}]},{featureType:"poi.park",elementType:"labels.text.fill",stylers:[{color:"#447530"}]},{featureType:"road",elementType:"geometry",stylers:[{color:"#f5f1e6"}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#fdfcf8"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{color:"#f8c967"}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#e9bc62"}]},{featureType:"road.highway.controlled_access",elementType:"geometry",stylers:[{color:"#e98d58"}]},{featureType:"road.highway.controlled_access",elementType:"geometry.stroke",stylers:[{color:"#db8555"}]},{featureType:"road.local",elementType:"labels.text.fill",stylers:[{color:"#806b63"}]},{featureType:"transit.line",elementType:"geometry",stylers:[{color:"#dfd2ae"}]},{featureType:"transit.line",elementType:"labels.text.fill",stylers:[{color:"#8f7d77"}]},{featureType:"transit.line",elementType:"labels.text.stroke",stylers:[{color:"#ebe3cd"}]},{featureType:"transit.station",elementType:"geometry",stylers:[{color:"#dfd2ae"}]},{featureType:"water",elementType:"geometry.fill",stylers:[{color:"#b9d3c2"}]},{featureType:"water",elementType:"labels.text.fill",stylers:[{color:"#92998d"}]}],{name:"Styled Map"}),t=new google.maps.StyledMapType([{elementType:"geometry",stylers:[{color:"#242f3e"}]},{elementType:"labels.text.stroke",stylers:[{color:"#242f3e"}]},{elementType:"labels.text.fill",stylers:[{color:"#746855"}]},{featureType:"administrative.locality",elementType:"labels.text.fill",stylers:[{color:"#d59563"}]},{featureType:"poi",elementType:"labels.text.fill",stylers:[{color:"#d59563"}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#263c3f"}]},{featureType:"poi.park",elementType:"labels.text.fill",stylers:[{color:"#6b9a76"}]},{featureType:"road",elementType:"geometry",stylers:[{color:"#38414e"}]},{featureType:"road",elementType:"geometry.stroke",stylers:[{color:"#212a37"}]},{featureType:"road",elementType:"labels.text.fill",stylers:[{color:"#9ca5b3"}]},{featureType:"road.highway",elementType:"geometry",stylers:[{color:"#746855"}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#1f2835"}]},{featureType:"road.highway",elementType:"labels.text.fill",stylers:[{color:"#f3d19c"}]},{featureType:"transit",elementType:"geometry",stylers:[{color:"#2f3948"}]},{featureType:"transit.station",elementType:"labels.text.fill",stylers:[{color:"#d59563"}]},{featureType:"water",elementType:"geometry",stylers:[{color:"#17263c"}]},{featureType:"water",elementType:"labels.text.fill",stylers:[{color:"#515c6d"}]},{featureType:"water",elementType:"labels.text.stroke",stylers:[{color:"#17263c"}]}],{name:"styled_map2"}),l=new google.maps.StyledMapType([{stylers:[{hue:"#3b5998"},{saturation:-22}]},{featureType:"administrative",elementType:"labels.icon",stylers:[{color:"#3b5998"},{visibility:"on"}]},{featureType:"administrative.country",elementType:"geometry.stroke",stylers:[{color:"#3b5998"},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]},{featureType:"landscape",stylers:[{color:"#f7f7f7"},{saturation:10},{lightness:76},{visibility:"on"}]},{featureType:"landscape.natural",stylers:[{color:"#f7f7f7"}]},{featureType:"road.highway",stylers:[{color:"#8b9dc3"},{visibility:"simplified"}]},{featureType:"road.highway",elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"road.local",elementType:"geometry.fill",stylers:[{color:"#8b9dc3"}]},{featureType:"transit.line",stylers:[{color:"#ffffff"},{weight:.43}]},{featureType:"water",stylers:[{color:"#3b5998"}]}],{name:"styled_map3"}),r=new google.maps.StyledMapType([{elementType:"labels.text.fill",stylers:[{color:"#ffffff"}]},{elementType:"labels.text.stroke",stylers:[{color:"#000000"},{lightness:13}]},{featureType:"administrative",elementType:"geometry.fill",stylers:[{color:"#000000"}]},{featureType:"administrative",elementType:"geometry.stroke",stylers:[{color:"#144b53"},{lightness:14},{weight:1.4}]},{featureType:"landscape",stylers:[{color:"#08304b"}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#0c4152"},{lightness:5}]},{featureType:"road.arterial",elementType:"geometry.fill",stylers:[{color:"#000000"}]},{featureType:"road.arterial",elementType:"geometry.stroke",stylers:[{color:"#0b3d51"},{lightness:16}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#000000"}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#0b434f"},{lightness:25}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#000000"}]},{featureType:"transit",stylers:[{color:"#146474"}]},{featureType:"water",stylers:[{color:"#021019"}]}],{name:"styled_map4"}),y=new google.maps.Map(document.getElementById("map"),{center:{lat:41.6843,lng:-93.9612},zoom:11,mapTypeControlOptions:{mapTypeIds:["roadmap","satellite","hybrid","terrain","styled_map","styled_map2","styled_map3","styled_map4"]}});y.mapTypes.set("styled_map",t),y.setMapTypeId("styled_map"),y.mapTypes.set("styled_map2",e),y.setMapTypeId("styled_map2"),y.mapTypes.set("styled_map3",l),y.setMapTypeId("styled_map3"),y.mapTypes.set("styled_map4",r),y.setMapTypeId("styled_map4")}
+
+      
+
+    </script>
+
+  <!--  <script type="text/javascript">
+      JSTree Example
+      $(function(){$("#jstree").jstree({core:{data:[{id:"1.0",text:"Layers",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[{id:"2.06.0",text:"Stores",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:!1,liAttributes:null,aAttributes:null},{id:"2.07.0",text:"Competition",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:!1,liAttributes:null,aAttributes:null},{id:"2.08.0",text:"Potential Sites",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:!1,liAttributes:null,aAttributes:null},{id:"2.09.0",text:"Potential Sites",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:!1,liAttributes:null,aAttributes:null},{id:"2.010.0",text:"Optimziation",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:!1,liAttributes:null,aAttributes:null}],liAttributes:null,aAttributes:null},{id:"2.0",text:"Contenents",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[],liAttributes:null,aAttributes:null},{id:"3.0",text:"Shopping Centers ",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[],liAttributes:null,aAttributes:null},{id:"4.0",text:"Planning Grocery",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[],liAttributes:null,aAttributes:null},{id:"5.0",text:"Customer Segmentation",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[],liAttributes:null,aAttributes:null},{id:"6.0",text:"Trip2Trade",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[],liAttributes:null,aAttributes:null},{id:"6.0",text:"Map Base Layer",icon:"",state:{opened:!1,disabled:!1,selected:!1},children:[],liAttributes:null,aAttributes:null}]},search:{case_insensitive:!0,show_only_matches:!0},plugins:["search"]})});
+
+    </script>  -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDb33YMDU7-j-zkgAy78hI_ZimD81LU8LE&callback=initMap">
+    </script>
+
+
+
+  </body>
+</html>

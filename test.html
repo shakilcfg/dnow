@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+</head>
+<!-- body of t//
+ the user clicks, open an infowindow
+map.data.addListener('click', function(event) {
+  var myHTML = event.feature.getProperty("description");
+  infowindow.setContent("<div style='width:150px;'>"+myHTML+"</div>");
+  // position the infowindow on the marker
+  infowindow.setPosition(event.feature.getGeometry().get());
+  // anchor the infowindow on the marker
+  infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+  infowindow.open(map);
+});he page with an onload to run the initialize function -->
+<body>
+
+<iframe width="100%" height="300" src="//jsfiddle.net/shakilrs/7nj31n9t/290/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+</body>
+</html>
